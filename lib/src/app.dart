@@ -9,6 +9,7 @@ class App extends GetView<BottomNavController> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
+      onWillPop: controller.willPopAction,
       child: Obx(
         () => Scaffold(
           backgroundColor: Colors.pink[100],
@@ -65,7 +66,6 @@ class App extends GetView<BottomNavController> {
           ),
         ),
       ),
-      onWillPop: controller.willPopAction,
     );
   }
 }
