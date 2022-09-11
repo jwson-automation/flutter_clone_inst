@@ -13,7 +13,16 @@ class App extends GetView<BottomNavController> {
         () => Scaffold(
           backgroundColor: Colors.pink[100],
           appBar: AppBar(),
-          body: Container(),
+          body: IndexedStack(
+            index: controller.pageIndex.value,
+            children: [
+              Container(child: Center(child: Text('home'))),
+              Container(child: Center(child: Text('search'))),
+              Container(child: Center(child: Text('upload'))),
+              Container(child: Center(child: Text('activity'))),
+              Container(child: Center(child: Text('mypage'))),
+            ],
+          ),
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             backgroundColor: Colors.white,
@@ -56,9 +65,7 @@ class App extends GetView<BottomNavController> {
           ),
         ),
       ),
-      onWillPop: () async {
-        return false; // False 닫지않겠다 / True 닫겠다
-      },
+      onWillPop: controller.willPopAction,
     );
   }
 }
