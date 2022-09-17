@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.white,
             titleTextStyle: TextStyle(color: Colors.pink)),
       ),
       initialBinding: InitBinding(),

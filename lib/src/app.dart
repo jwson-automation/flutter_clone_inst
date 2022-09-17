@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clone_inst/src/components/image_data.dart';
 import 'package:flutter_clone_inst/src/controller/bottom_nav_controller.dart';
+import 'package:flutter_clone_inst/src/pages/Search.dart';
 import 'package:flutter_clone_inst/src/pages/home.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +21,7 @@ class App extends GetView<BottomNavController> {
             children: [
               const Home(),
               // Container(child: Center(child: Text('home'))),
-              Container(child: Center(child: Text('search'))),
+              const Search(),
               Container(child: Center(child: Text('upload'))),
               Container(child: Center(child: Text('activity'))),
               Container(child: Center(child: Text('mypage'))),
