@@ -51,36 +51,41 @@ class _SearchFocusState extends State<SearchFocus>
         ),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(AppBar().preferredSize.height),
-          child: Row(
-            children: [
-              Expanded(
-                child: TabBar(
-                  controller: tabController,
-                  tabs: const [
-                    Text(
-                      '인기',
-                      style: TextStyle(fontSize: 15, color: Colors.black),
-                    ),
-                    Text(
-                      '계정',
-                      style: TextStyle(fontSize: 15, color: Colors.black),
-                    ),
-                    Text(
-                      '계정',
-                      style: TextStyle(fontSize: 15, color: Colors.black),
-                    ),
-                    Text(
-                      '계정',
-                      style: TextStyle(fontSize: 15, color: Colors.black),
-                    ),
-                    Text(
-                      '계정',
-                      style: TextStyle(fontSize: 15, color: Colors.black),
-                    ),
-                  ],
-                ),
-              )
-            ],
+          child: Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                      height: AppBar().preferredSize.height,
+                      width: Size.infinite.height,
+                      child: TabBar(
+                        controller: tabController,
+                        tabs: const [
+                          Text(
+                            '인기',
+                            style: TextStyle(fontSize: 15, color: Colors.black),
+                          ),
+                          Text(
+                            '계정',
+                            style: TextStyle(fontSize: 15, color: Colors.black),
+                          ),
+                          Text(
+                            '계정',
+                            style: TextStyle(fontSize: 15, color: Colors.black),
+                          ),
+                          Text(
+                            '계정',
+                            style: TextStyle(fontSize: 15, color: Colors.black),
+                          ),
+                          Text(
+                            '계정',
+                            style: TextStyle(fontSize: 15, color: Colors.black),
+                          ),
+                        ],
+                      )),
+                )
+              ],
+            ),
           ),
         ),
       ),
