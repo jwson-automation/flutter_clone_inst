@@ -32,50 +32,54 @@ class _SearchFocusState extends State<SearchFocus>
               child: ImageData(IconPath.backBtnIcon),
             )),
         titleSpacing: 0,
-        title: Container(
-          margin: const EdgeInsets.only(right: 15),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(6),
-              color: const Color(0xffefefef)),
-          child: const TextField(
-              decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: '검색',
-                  contentPadding: EdgeInsets.only(left: 15, top: 7, bottom: 7),
-                  isDense: true)),
+        title: Expanded(
+          child: Container(
+            // width: 50,
+            // height: 50,
+            margin: const EdgeInsets.only(right: 15),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6),
+                color: const Color(0xffefefef)),
+            child: const TextField(
+                decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: '검색',
+                    contentPadding:
+                        EdgeInsets.only(left: 15, top: 7, bottom: 7),
+                    isDense: true)),
+          ),
         ),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(AppBar().preferredSize.height),
           child: Row(
             children: [
-              Container(
-                  height: AppBar().preferredSize.height,
-                  width: Size.infinite.width,
-                  child: TabBar(
-                    controller: tabController,
-                    tabs: const [
-                      Text(
-                        '인기',
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                      ),
-                      Text(
-                        '계정',
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                      ),
-                      Text(
-                        '계정',
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                      ),
-                      Text(
-                        '계정',
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                      ),
-                      Text(
-                        '계정',
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                      ),
-                    ],
-                  ))
+              Expanded(
+                child: TabBar(
+                  controller: tabController,
+                  tabs: const [
+                    Text(
+                      '인기',
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                    ),
+                    Text(
+                      '계정',
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                    ),
+                    Text(
+                      '계정',
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                    ),
+                    Text(
+                      '계정',
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                    ),
+                    Text(
+                      '계정',
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
